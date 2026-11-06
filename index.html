@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TezBozor — tez yetkazib berish</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <button class="logo" id="logo" type="button" aria-label="Bosh sahifa">
+          <img class="logo-mark" src="img/logos/tezbozor.svg" alt="" />
+          <span>TezBozor</span>
+        </button>
+
+        <div class="address">
+          <span class="address-city">Rishton</span>
+          <span class="address-drop">Uyga yetkazib beramiz</span>
+        </div>
+
+        <label class="search">
+          <span class="sr-only">Qidirish</span>
+          <input id="search" type="search" placeholder="Taom yoki joy nomini yozing" autocomplete="off" />
+        </label>
+
+        <button class="cart-btn" id="cart-btn" type="button">
+          Savat
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="app"></main>
+
+    <aside class="drawer" id="drawer" hidden>
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+      <div class="drawer-panel" role="dialog" aria-labelledby="drawer-title">
+        <header class="drawer-head">
+          <h2 id="drawer-title">Savat</h2>
+          <button class="icon-btn" id="close-drawer" type="button" aria-label="Yopish">×</button>
+        </header>
+        <div class="drawer-body" id="drawer-body"></div>
+      </div>
+    </aside>
+
+    <div class="modal" id="address-modal" hidden>
+      <div class="modal-backdrop" id="address-backdrop"></div>
+      <div class="modal-panel" role="dialog" aria-labelledby="address-title">
+        <header class="modal-head">
+          <h2 id="address-title">Qayerga yetkazamiz</h2>
+          <button class="icon-btn" id="close-address" type="button" aria-label="Yopish">×</button>
+        </header>
+        <div class="addresses" id="address-list"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" hidden></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
